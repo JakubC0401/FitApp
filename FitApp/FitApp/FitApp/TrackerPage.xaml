@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FitApp.TrackerPage"
+             BackgroundColor="White">
+    <ContentPage.Content>
+        
+        
+        <FlexLayout Direction="Column" JustifyContent="Center" Padding="40">
+
+            <Label Margin="0, 0, 0, 20" HorizontalOptions="CenterAndExpand" Text="Running Tracker" FontSize="Large"  TextColor="#0088FF"  FontAttributes="Bold"  ></Label>
+            <StackLayout VerticalOptions="Center" >
+                <Label VerticalTextAlignment="Center" VerticalOptions="Center"  Text="00:00:00:0000" x:Name="stopwatchLabel" FontSize="Large" TextColor="Black"></Label>
+            </StackLayout>
+            <StackLayout >
+                <Label TextColor="#0088FF" Text="Click start button when you start running!" FontAttributes="Bold" FontSize="20"/>
+                <Button BackgroundColor="Green" TextColor="White" Text="Start" Clicked="onStart" FontAttributes="Bold" FontSize="Large" CornerRadius="10"/>
+            </StackLayout>
+
+            <StackLayout>
+                <Label TextColor="#0088FF" Text="Click stop button when you end running!" FontAttributes="Bold" FontSize="20"/>
+                <Button BackgroundColor="Red" Text="Stop" TextColor="White" Clicked="onStop" FontAttributes="Bold" FontSize="Large" CornerRadius="10"/>
+            </StackLayout>
+
+
+            <StackLayout>
+                <Label Text="You were running for:" TextColor="#0088FF"  FontAttributes="Bold" FontSize="20"/>
+                <Label Text="" x:Name="secLabel" FontSize="30" TextColor="Black"/>
+            </StackLayout>
+
+            <StackLayout>
+                <Label Text="Distance of your run:" TextColor="#0088FF"  FontAttributes="Bold" FontSize="20"></Label>
+                <Label Text="" x:Name="distanceLablel" FontSize="30" TextColor="Black"></Label>
+            </StackLayout>
+
+            
+           
+        </FlexLayout>
+       
+           
+       
+    </ContentPage.Content>
+</ContentPage>

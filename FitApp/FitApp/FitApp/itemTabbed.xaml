@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FitApp.itemTabbed">
+    <ContentPage.Content>
+        <StackLayout Padding="8">
+
+            <Label Text="Meal name:"
+                   Padding="5"
+                   HorizontalTextAlignment="Center"
+                   x:Name="MealNameLabel"
+                   Grid.Row="0"
+                   Grid.Column="0"
+                   FontSize="50"
+                   />
+
+            <StackLayout Grid.Row="1" Orientation="Horizontal" Spacing="0" Margin="5">
+                <Label Text="Kcals:"
+                   Grid.Row="1"
+                   Grid.Column="0"
+                   FontAttributes="Bold"/>
+                <Label Text=""
+                   x:Name="KcalsLabel"
+                   Grid.Row="1"
+                   Grid.Column="1"/>
+            </StackLayout>
+
+            <StackLayout Grid.Row="1" Orientation="Horizontal" Spacing="0" Margin="5">
+                <Label Text="date"
+                   Grid.Row="2"
+                   Grid.Column="0"
+                   FontAttributes="Bold"/>
+                <Label Text=""
+                   x:Name="timelbl"
+                   Grid.Row="2"
+                   Grid.Column="1"/>
+            </StackLayout>
+
+            
+        </StackLayout>
+        </ContentPage.Content>
+</ContentPage>

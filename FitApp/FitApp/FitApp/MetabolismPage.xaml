@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:FitApp.ViewModels"
+             x:Class="FitApp.MetabolismPage"
+             BackgroundColor="White">
+   
+<ContentPage.Content>
+        <StackLayout>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+            </Grid>
+            <Label Margin="0, 0, 0, 20"  HorizontalOptions="CenterAndExpand" FontAttributes="Bold" Text="Metabolism Calculator" FontSize="30" TextColor="#0088FF" Grid.Row="0" ></Label>
+            <Label Text="Select your gender:" TextColor="#0088FF" FontSize="Large"  Grid.Row="1"></Label>
+            
+            <Picker  Grid.Row="2" Grid.Column="0" BackgroundColor="White" x:Name="GenderPicker"  TitleColor="#0088FF" TextColor="Black" FontSize="Large">
+                <Picker.ItemsSource>
+                    <x:Array  Type="{x:Type x:String}">
+                        <x:String>Man</x:String>
+                        <x:String>Woman</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
+            
+            <Label FontSize="Large" Text="How tall are you ?" TextColor="#0088FF" />
+            <Entry Keyboard="Numeric" MaxLength="3" Placeholder="enter your height in cm" BackgroundColor="White" Text="" x:Name="HeigtEntry" TextColor="Black" FontSize="15"/>
+            
+            <Label FontSize="Large" Text="How much do you weight ?" TextColor="#0088FF" />
+            <Entry Keyboard="Numeric" MaxLength="3" Placeholder="enter your weight in kg" BackgroundColor="White" Text="" x:Name="WeightEntry" TextColor="Black"  FontSize="15"/>
+            
+            <Label FontSize="Large" Text="Enter your age:" TextColor="#0088FF"/>
+            <Entry Keyboard="Numeric" MaxLength="3" Placeholder="enter your age " BackgroundColor="White" Text="" x:Name="AgeEntry" TextColor="Black" FontAttributes="Bold" FontSize="15"/>
+
+            <Label  Text="Results:" TextColor="#0088FF" FontSize="Large"/>
+            <Label  x:Name="resultsLabel" Text="" TextColor="Black"  FontSize="15"/>
+            
+            <Button Text="Calculate" FontSize="20" FontAttributes="Bold" TextColor="White" Clicked="Calculate" Background="#0088FF"></Button>
+        </StackLayout>
+       
+    </ContentPage.Content>
+</ContentPage>

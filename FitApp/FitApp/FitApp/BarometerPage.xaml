@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FitApp.BarometerPage"
+             BackgroundColor="White">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Map" Margin="0, 0, 0, 20" TextColor="#0088FF" FontSize="30" FontAttributes="Bold" HorizontalTextAlignment="Center"/>
+            
+            <Label x:Name="pressuerResult" FontSize="20" TextColor="Black" VerticalOptions="Center" HorizontalOptions="Center" Text="Pressure is:"></Label>
+            <Button Margin="0, 0, 0, 20" Padding="10" FontAttributes="Bold" VerticalOptions="EndAndExpand" BackgroundColor="#0088FF" Clicked="openMap" Text="Open Map "></Button>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

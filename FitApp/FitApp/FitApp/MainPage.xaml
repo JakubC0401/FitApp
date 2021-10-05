@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FitApp.MainPage"
+             BackgroundColor="White">
+
+    <StackLayout HorizontalOptions="Center" VerticalOptions="CenterAndExpand" Padding="40">
+        <Grid >
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+        </Grid>
+        <Label  Margin="0, 0, 0, 20"  BackgroundColor="#FFFFFF" TextColor="#0088FF" Grid.Row="0" Text="Welcome in FitApp"  FontSize="20" FontAttributes="Bold" ></Label>
+
+        <Button FontAttributes="Bold" Text="Calculate BMI" Clicked="ToBmiCalculator" Grid.Row="1" BackgroundColor="#0088FF" TextColor="White" BorderColor="#A8A8A8" BorderWidth="1" CornerRadius="10"></Button>
+        <Button FontAttributes="Bold" Text="Track your run" Clicked="ToTracker" Grid.Row="2" BackgroundColor="#0088FF" TextColor="White" BorderColor="#A8A8A8" BorderWidth="1" CornerRadius="10"></Button>
+        <Button FontAttributes="Bold"  Text="Metabolism calculator" Clicked="ToMetabolism" Grid.Row="3" BackgroundColor="#0088FF" TextColor="White" BorderColor="#A8A8A8" BorderWidth="1" CornerRadius="10"></Button>
+        <Button FontAttributes="Bold"  Text="Map" Clicked="ToBarometer"  Grid.Row="4" BackgroundColor="#0088FF" TextColor="White" BorderColor="#A8A8A8" BorderWidth="1" CornerRadius="10"></Button>
+        <Button FontAttributes="Bold" Text="Meal List" Clicked="ToListPage"  Grid.Row="5" BackgroundColor="#0088FF" TextColor="White" BorderColor="#A8A8A8" BorderWidth="1" CornerRadius="10"></Button>
+    </StackLayout>
+
+</ContentPage>

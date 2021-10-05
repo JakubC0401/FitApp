@@ -1,0 +1,1 @@
+C:\Users\jakub\source\repos\FitApp\FitApp\FitApp.UWP\FitApp.UWP.csproj;x86

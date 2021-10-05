@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FitApp.BMIpage"
+             BackgroundColor="white">
+
+    
+    <FlexLayout Direction="Column"
+                JustifyContent="SpaceEvenly"
+                Padding="40">
+        <StackLayout>
+            <Label  HorizontalOptions="Center" Text="BMI Calculator" TextColor="#0088FF" FontAttributes="Bold" FontSize="Large"> </Label>
+        </StackLayout>
+        <StackLayout>
+            <Label Text="How tall are you ?" TextColor="#0088FF" FontAttributes="Bold"/>
+            <Label TextColor="#0088FF" Text="{Binding Source={x:Reference HeightSlider},
+                    Path=Value,
+                    StringFormat='{0:F0} cm'}"
+                  />
+            <Slider x:Name="HeightSlider"
+                    
+                    Maximum="220"
+                    Minimum="60"
+                    Value="{Binding Height}" Opacity="1" BackgroundColor="White" ThumbColor="#0088FF" MaximumTrackColor="#737373" MinimumTrackColor="#737373"/>
+        </StackLayout>
+        <StackLayout>
+            <Label TextColor="#0088FF" Text="How much do you weight ?" FontAttributes="Bold"
+                   />
+            <Label TextColor="#0088FF" Text="{Binding Source={x:Reference WeightSlider},
+                    Path=Value,
+                    StringFormat='{0:F0} kg'}"
+                   />
+            <Slider x:Name="WeightSlider"
+                    Maximum="150"
+                    Minimum="40"
+                    Value="{Binding Weight}" Opacity="1" BackgroundColor="White" ThumbColor="#0088FF" MaximumTrackColor="#737373" MinimumTrackColor="#737373"/>
+        </StackLayout>
+        <StackLayout VerticalOptions="CenterAndExpand">
+            <Label TextColor="#0088FF" Text="Your Bmi is" FontAttributes="Bold"
+                  
+                   />
+            <Label TextColor="#0088FF" Text="{Binding Bmi}"
+                 
+                   FontSize="48" FontAttributes="Bold"
+                   />
+            <Label x:Name="resultsLabel" TextColor="#0088FF" Text="{Binding Classification}" FontAttributes="Bold"
+                  
+                   />
+        </StackLayout>
+    </FlexLayout>
+</ContentPage>

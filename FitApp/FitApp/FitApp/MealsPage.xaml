@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FitApp.MealsPage"
+             BackgroundColor="White">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="My Meals List"
+               TextColor="#0088FF" FontSize="30" FontAttributes="Bold"
+                HorizontalOptions="CenterAndExpand" />
+
+            <Label Text="Meal name:" FontSize="20" TextColor="#0088FF" FontAttributes="Bold"/>
+            <Entry x:Name="mealEntry" Placeholder="enter your meal name" FontSize="15" TextColor="Black"  BackgroundColor="White"
+                    Margin="0,0,0,30"/>
+
+
+           
+
+
+            <Label Text="Meal kcal's:" FontSize="20" TextColor="#0088FF" FontAttributes="Bold"/>
+            <Entry x:Name="kcalsEntry" Placeholder="enter your meal kcals" FontSize="15" TextColor="Black"  BackgroundColor="White" Keyboard="Numeric"
+                     Margin="0,0,0,30"/>
+
+            <Label Text="Select Date:" FontSize="20" TextColor="#0088FF" FontAttributes="Bold"/>
+            <DatePicker x:Name="datePicker" BackgroundColor="#FFFFFF" TextColor="#000000" ></DatePicker>
+
+            <Button VerticalOptions="EndAndExpand" Margin="0,0,0,10" Text="Save" Clicked="onSaveButton" FontAttributes="Bold" BackgroundColor="#0088FF" TextColor="White"></Button>
+            <Button VerticalOptions="EndAndExpand" Margin="0,0,0,30" Text="Show All Meals" Clicked="ShowAll" FontAttributes="Bold" BackgroundColor="#0088FF" TextColor="White"></Button>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

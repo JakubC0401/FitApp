@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FitApp.AllMeals"
+             BackgroundColor="White">
+    <ContentPage.Content>
+        <ListView x:Name="MealsListView"
+                  Margin="10"
+                  ItemsSource="{Binding Meals}"
+                  BackgroundColor="#0088FF"
+                  SelectedItem="{Binding selectedRecipe}"
+                  SelectionMode="None" 
+                  ItemTapped="RecipesListView_ItemTapped">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*" />
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <StackLayout Orientation="Horizontal" Margin="0,2" Padding="6">
+                                <Label  Text="{Binding MealName}"      FontSize="15" />
+                                <Label  Text="{Binding MealKcals}"  FontSize="15" HorizontalOptions="EndAndExpand"/>
+                                <Button x:Name="deleteButton" Text="Usuń" CommandParameter="{Binding ItemName}" Clicked="deleteButton_Clicked"/>
+                            </StackLayout>
+                        </Grid>
+
+
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </ContentPage.Content>
+</ContentPage>
